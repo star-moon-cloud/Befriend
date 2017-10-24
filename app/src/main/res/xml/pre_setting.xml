@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory
+    android:layout="@layout/prefs_category_widget"
+    android:title="选择模块">
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:key="checkbox_preference"
+        android:title="开关" />
+    <ListPreference
+        android:dialogTitle="dialog_title_list_preference"
+        android:entries="@array/floatColor"
+        android:entryValues="@array/floatColor_value"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:key="list_preference"
+        android:summary="用单选列表来选择数据"
+        android:title="单选列表" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/prefs_category_widget"
+        android:title="二级菜单">
+        <PreferenceScreen
+
+            android:icon="@mipmap/ic_launcher"
+            android:title="点击触发Intent动作" >
+        <intent
+        android:action="android.intent.action.VIEW"
+        android:data="http://www.android.com" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="打开二级">
+            <PreferenceCategory
+                android:layout="@layout/prefs_category_widget">
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:key="cb21"
+                    android:summaryOff="关闭"
+                    android:summaryOn="开启"
+                    android:title="功能1" />
+
+                <SwitchPreference
+                    android:defaultValue="true"
+                    android:dialogTitle="点击后触发的功能"
+                    android:key="autoScroll"
+                    android:summaryOff="关闭"
+                    android:summaryOn="开启"
+                    android:title="自动滚动" />
+
+            </PreferenceCategory>
+
+
+        </PreferenceScreen>
+
+
+</PreferenceCategory>
+
+</PreferenceScreen>
